@@ -14,27 +14,6 @@
 <body>
     <h2>SpotHero Parking Pass</h2>
     <p>This is a test page to hide the "Request Cancellation" button.</p>
-
-    <script>
-        function hideCancelButton() {
-            let cancelButton = document.querySelector('[data-testid="CancelReservation-button-delete"]');
-            if (cancelButton) {
-                cancelButton.style.display = "none"; // Hide the button
-                console.log("Request Cancellation button hidden.");
-            }
-        }
-
-        // Run once on page load
-        document.addEventListener("DOMContentLoaded", hideCancelButton);
-
-        // Keep checking every 500ms in case the button reappears
-        let interval = setInterval(() => {
-            let button = document.querySelector('[data-testid="CancelReservation-button-delete"]');
-            if (button) {
-                button.style.display = "none"; // Hide it
-                console.log("Request Cancellation button hidden.");
-            }
-        }, 500);
-    </script>
+    <script src="hide_cancel_button.js"></script>
 </body>
 </html>
