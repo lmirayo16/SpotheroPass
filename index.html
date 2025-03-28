@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Parking Pass</title>
-    <script>
+<script>
+    function removeCancelButton() {
+        let cancelButton = document.querySelector('[data-testid="CancelReservation-button-delete"]');
+        if (cancelButton) {
+            cancelButton.style.display = "none"; // Hide the button
+            cancelButton.remove(); // Remove the button from the DOM
+            console.log("Request Cancellation button removed.");
+        } else {
+            setTimeout(removeCancelButton, 500); // Try again in 0.5 seconds if not found
+        }
+    }
+
     document.addEventListener("DOMContentLoaded", function() {
-        setTimeout(() => {
-            let cancelButton = document.querySelector('[data-testid="CancelReservation-button-delete"]');
-            if (cancelButton) {
-                cancelButton.style.display = "none"; // Hides the button
-                cancelButton.remove(); // Completely removes it from the page
-            }
-        }, 3000); // 3-second delay to ensure it loads first
+        setTimeout(removeCancelButton, 2000); // Start checking after 2 seconds
     });
 </script>
-</head>
-<body>
-    <a href="https://spothero.com/parking-pass/96363618?key=f83628ee78d4c13913f3e468a49759058c852d8420d315cfb3f7e4311b0b4748&_branch_match_id=1401690758211250180&utm_source=confirmation_email&utm_campaign=parking_pass&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXLy7IL8lILcrXSywo0MvJzMvWLzcNyshwKys1DUqyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAbzUFCT8AAAA%3D" 
-       target="_blank">Open Parking Pass</a>
-</body>
-</html>
