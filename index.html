@@ -2,19 +2,12 @@
 <html>
 <head>
     <title>Parking Pass</title>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Find all <a> (links) on the page
-            let links = document.querySelectorAll("a");
-            
-            // Loop through each link and remove if the text matches exactly
-            links.forEach(link => {
-                if (link.innerText.trim() === "Request Cancellation") {
-                    link.remove();
-                }
-            });
-        });
-    </script>
+    <style>
+        /* Hide the "Request Cancellation" link */
+        a[data-testid="CancelReservation-button-delete"] {
+            display: none !important;
+        }
+    </style>
 </head>
 <body>
     <a href="https://spothero.com/parking-pass/96363618?key=f83628ee78d4c13913f3e468a49759058c852d8420d315cfb3f7e4311b0b4748&_branch_match_id=1401690758211250180&utm_source=confirmation_email&utm_campaign=parking_pass&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXLy7IL8lILcrXSywo0MvJzMvWLzcNyshwKys1DUqyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAbzUFCT8AAAA%3D" 
